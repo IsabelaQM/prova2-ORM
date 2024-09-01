@@ -1,0 +1,89 @@
+# Pacote
+#---------------------------
+
+###
+GET /api/pacotes
+Host: localhost:8080
+
+###
+POST /api/pacotes
+Host: localhost:8080
+Content-Type: application/json
+
+{
+		"idUnico": "ABCD1234567",
+		"destinatario": "Hermenegildo Silva",
+		"endereco": {
+			"id":1
+		},
+		"status": "pendente"
+}
+
+
+###
+GET /api/pacotes/1
+Host: localhost:8080
+
+###
+GET /api/pacotes/2
+Host: localhost:8080
+
+###
+PUT /api/pacotes/1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+	"status": "entregue"
+}	 
+
+###
+DELETE /api/pacotes/2
+Host: localhost:8080
+
+###
+GET /api/pacotes/status/entregue
+Host: localhost:8080
+
+###
+GET /api/pacotes/destinatario/Hermenegildo Silva
+Host: localhost:8080
+
+# Rastreamento
+#----------------------------------------------------
+###
+GET /api/rastreamentos/1
+Host: localhost:8080
+
+
+# Endereco
+#--------------------------------------------------------
+###
+GET /api/enderecos
+Host: localhost:8080
+
+###
+POST /api/enderecos
+Host: localhost:8080
+Content-Type: application/json
+
+    {
+        "rua": "Rua das Flores",
+        "numero": 123,
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "12345-678"
+    }
+
+###
+POST /api/enderecos
+Host: localhost:8080
+Content-Type: application/json
+
+    {
+        "rua": "Rua das Rosas",
+        "numero": 456,
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "12345-678"
+    }
